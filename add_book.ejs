@@ -1,0 +1,96 @@
+<%- include('Layout/header') %>
+
+
+<style>
+    body {
+        background-color: #f8f9fa; /* Light background color for contrast */
+        font-family: Arial, sans-serif; /* Change font for better readability */
+    }
+
+    .form-box {
+        background-color: rgb(255, 255, 255); /* Semi-transparent white background */
+        border-radius: 15px; /* More subtle rounded corners */
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow for a floating effect */
+        padding: 30px; /* Increased padding for a more spacious layout */
+        margin: 40px auto; 
+        max-width: 800px;
+        width: 90%; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+    }
+
+    .form-box:hover {
+        transform: translateY(-5px); /* Lift effect on hover */
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    }
+
+    .form-label {
+        color: #03061b; /* Dark color for labels */
+        font-size: 22px; /* Slightly smaller font for labels */
+        margin-bottom: 10px; /* Space between label and input */
+        display: block; /* Ensures label is a block element */
+    }
+
+    .form-control {
+        border-radius: 25px; /* Rounded input fields */
+        padding: 12px; /* Padding for inputs */
+        border: 2px solid #ced4da; /* Border for input fields */
+        transition: border-color 0.3s ease; /* Transition for border color */
+    }
+
+    .form-control:focus {
+        border-color: #007bff; /* Change border color on focus */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow on focus */
+        outline: none; /* Remove default outline */
+    }
+
+    .btn {
+        background-color: #007bff; 
+        color: #fff; 
+        padding: 10px 20px; 
+        border-radius: 25px; 
+        border: none; 
+        font-size: 16px;
+        transition: background-color 0.3s ease, transform 0.3s ease; 
+    }
+
+    .btn:hover {
+        background-color: #0056b3; 
+        transform: translateY(-2px);
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="form-box">
+                <form action="/Add" method="post" enctype="multipart/form-data" class="row g-3">
+                    <div class="mb-3">
+                        <label for="bookname" class="form-label">Book Name</label>
+                        <input type="text" name="bookname" class="form-control" id="bookname" placeholder="Book Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="authorname" class="form-label">Author Name</label>
+                        <input type="text" name="authorname" class="form-control" id="authorname" placeholder="Author Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Book Price</label>
+                        <input type="text" name="price" class="form-control" id="price" placeholder="Price" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="summary" class="form-label">About Book</label>
+                        <textarea class="form-control" name="summary" id="summary" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Book Image</label>
+                        <input class="form-control" name="image" type="file" id="formFile" required>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" name="submit" value="add book" class="btn btn-primary mb-3">Add Book</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('Layout/footer') %>

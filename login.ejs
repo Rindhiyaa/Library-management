@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            background-image: url("https://www.freepik.com/free-vector/mobile-login-concept-illustration_4957136.htm#fromView=search&page=1&position=27&uuid=bf8a8f9e-bd67-4201-a39e-049feecba8b0&new_detail=true&query=+login+page");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .form-container {
+            width: 500px;
+            padding: 25px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: left;
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 40px;
+        }
+
+        h1 {
+            text-align: left;
+            margin-bottom: 40px;
+            color: #f0a22d;
+            font-size: 40px;
+        }
+
+        .form-group select, .form-group input {
+            width: 90%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            margin-left: 5%;
+            display: block;
+        }
+
+        .submit-btn {
+            background-color: #2636ae;
+            width: 90%;
+            padding: 10px;
+            color: #f2f2f2;
+            margin: 20px 5% 0;
+            border: none;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            border-radius: 25px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .submit-btn:hover {
+            background-color: #4565a0;
+        }
+
+        p {
+            text-align: center;
+            font-size: 17px;
+            margin-top: 20px;
+        }
+
+        .form-right {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+        }
+
+        .form-right img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Hello,</h2>
+        <h1>Welcome Back</h1>
+        <form action="/login" method="post">
+            <!-- <div class="form-group">
+                <select id="role" name="role" required>
+                    <option value="">Select Role</option>
+                    <option value="admin">Admin</option>
+                    <option value="student">Student</option>
+                </select>
+            </div> -->
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/Register">Signup</a></p>
+    </div>
+    <!-- <div class="form-right">
+        <img src="https://skms.nrcp.dost.gov.ph/assets/frontend/img/lms.png" alt="Login Image">
+    </div> -->
+</body>
+</html>
